@@ -32,6 +32,7 @@ void IncreaseSize(SqList &L, int len) {
 int main() {
     SqList L;
     InitList(L);
+    IncreaseSize(L, 5);
 }
 
 
