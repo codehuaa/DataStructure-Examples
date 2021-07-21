@@ -41,6 +41,17 @@ bool ListDelete(SqList &L, int index, int &e) {
     return true;
 }
 
+ElemType GetElem(SqList L, int index) {
+    return L.data[index-1];
+}
+
+int LocationElem(SqList L, int e) {
+    for(int i = 0; i < L.length; ++i) {
+        if(L.data[i] = e) return i+1;
+    }
+    return -1;
+}
+
 int main() {
     SqList L;
     InitList(L);
