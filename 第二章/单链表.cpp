@@ -62,7 +62,7 @@ bool InsertPriorNode(LNode *p, Element e) {  // some problem when p is the last 
 
 
 // insert node at specify location
-bool ListInsert(LinkList &L, int index, Element e) {
+bool ListInsert(LinkList L, int index, Element e) {
     if(index < 1)   return false;  // illegal index
     LNode *p = getElem(L, index - 1);
     return InsertNextNode(p, e);
@@ -98,7 +98,9 @@ int main()
 {
     LinkList L;
     InitList(L);
-    ListInsert(L, 1, 23);
+    ListInsert(L, 1, 13);
+    ListInsert(L, 2, 23);
+    ListInsert(L, 3, 33);
     ShowList(L);
     printf("%d\n", Length(L));
 }
